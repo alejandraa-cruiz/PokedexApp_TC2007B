@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.kotlin.pokedexapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.kotlin.pokedexapp"
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -40,6 +40,10 @@ dependencies {
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.8.0")
+    implementation("androidx.navigation:navigation-fragment:2.7.1")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //Retrofit Connections with APIs and HTTP
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
@@ -55,16 +59,17 @@ dependencies {
 
     //Fragment Maintain alive old libraries
     implementation ("androidx.fragment:fragment-ktx:1.5.0")
+
     //Activity
         implementation ("androidx.activity:activity-ktx:1.5.0")
+
     //Databinding
         implementation ("androidx.databinding:databinding-runtime:7.1.2")
 
     // ViewModel
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
-// LiveData
+
+    // LiveData
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
 }

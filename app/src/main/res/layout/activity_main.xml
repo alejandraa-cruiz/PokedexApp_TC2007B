@@ -4,12 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <!--The id declares a new component so you can connect
-    it to your code through binding. RV stands for RecyclerView-->
 
-    <androidx.recyclerview.widget.RecyclerView
+    <include        android:id="@+id/app_bar_main"
+        layout="@layout/main_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+    <fragment
+        android:id="@+id/nav_host_fragment_content_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/RVPokemon"
+        android:layout_above="@+id/app_bar_main"
         />
+
 </RelativeLayout>
